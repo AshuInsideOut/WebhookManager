@@ -1,0 +1,14 @@
+{
+  "webhooks": {
+    "WEBHOOK-ID": "https://discord.com/api/webhooks/ID/TOKEN"
+  },
+  "contents": {
+    "CONTENT-ID": {
+      "message": "YOoo",
+      "embed": {
+        "description": "This is a very cool description",
+        "color": 3092792
+      }
+    }
+  }
+}
