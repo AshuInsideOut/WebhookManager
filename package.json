@@ -9,6 +9,7 @@
   "author": "ABDevs",
   "license": "ISC",
   "dependencies": {
+    "@abdevs/console-manager": "^1.0.1",
     "discord.js": "^12.5.3",
     "readline": "^1.3.0"
   }

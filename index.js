@@ -1,18 +1,6 @@
 const { WebhookClient, MessageEmbed } = require('discord.js');
 const config = require('./config.json');
-const consoleManager = require('./managers/consoleManager');
-
-consoleManager.addCommand({
-    command: 'help',
-    handler: async () => {
-        let description = '\n';
-        consoleManager.commandHandlerObjs.forEach(commandObj => description += `${commandObj.command} : ${commandObj.description}\n`);
-        console.log('============Commands============');
-        console.log(description);
-        console.log('====================================');
-    },
-    description: 'Shows all the avaliable commands'
-});
+const consoleManager = require('@abdevs/console-manager')();
 
 consoleManager.addCommand({
     command: 'stop',
@@ -67,8 +55,6 @@ consoleManager.addCommand({
     },
     description: 'Sends a Webhook Message'
 });
-
-consoleManager.init();
 
 
 console.log('\n====================================');
