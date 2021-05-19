@@ -1,8 +1,9 @@
 const { WebhookClient, MessageEmbed } = require('discord.js');
 const config = require('./config.json');
-const consoleManager = require('@abdevs/console-manager')();
+const consoleManager = require('@abdevs/console-manager');
+const { commandManager } = consoleManager;
 
-consoleManager.addCommand({
+commandManager.addCommand({
     command: 'stop',
     handler: async () => {
         console.log(`Thanks for using ABDevs Webhook Manager!`);
@@ -11,7 +12,7 @@ consoleManager.addCommand({
     description: 'Shutdown the application'
 });
 
-consoleManager.addCommand({
+commandManager.addCommand({
     command: 'send',
     handler: async (command, args) => {
         if (args.length < 2) {
@@ -56,6 +57,7 @@ consoleManager.addCommand({
     description: 'Sends a Webhook Message'
 });
 
+consoleManager.init();
 
 console.log('\n====================================');
 console.log('Welcome to ABDevs Webhook Manager');
