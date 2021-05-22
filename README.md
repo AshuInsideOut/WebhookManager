@@ -11,3 +11,9 @@ Lets you manage and execute your Discord Webhooks easily.
 # Commands
 
 help : Shows all the command with description.
+
+# Terms and Conditions
+
+This Repository only available for code look up and personal use.
+
+You are not allowed to steal the code from this repository.
