@@ -1,0 +1,12 @@
+webhooks:
+  WEBHOOK-ID: https://discord.com/api/webhooks/ID/TOKEN
+contents:
+  CONTENT-ID:
+    message: YOoo
+    embed:
+      author: 'This is author'
+      description: This is a very cool description
+      color: 0x60f542
+      footer: 'This is footer'
+      image: 'IMAGE LINK'
+      thumbnail: 'LINK'

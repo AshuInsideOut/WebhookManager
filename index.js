@@ -1,5 +1,7 @@
 const { WebhookClient, MessageEmbed } = require('discord.js');
-const config = require('./config.json');
+const fs = require('fs');
+const file = fs.readFileSync('./config.yml', 'utf8');
+const config = require('yaml').parse(file);
 const consoleManager = require('@abdevs/console-manager');
 const { commandManager } = consoleManager;
 
@@ -46,7 +48,7 @@ commandManager.addCommand({
                 content.embed.description.forEach(line => description += `${line}\n`);
                 content.embed.description = description;
             }
-            embed = new MessageEmbed(content.embed);
+            embed = new MessageEmbed(generateEmbed(content.embed));
         }
         if (message && embed) webhookClient.send(message, embed);
         else if (message) webhookClient.send(message);
@@ -63,3 +65,27 @@ console.log('\n====================================');
 console.log('Welcome to ABDevs Webhook Manager');
 console.log('====================================');
 console.log('Run help for all the avaliable commands\n');
+
+/**
+ * @param {Object} obj
+ * @return {Object}
+ */
+function deepCloneWithLose(obj) {
+    return JSON.parse(JSON.stringify(obj));
+}
+
+/**
+ * @param {any} obj
+ * @return {MessageEmbed}
+ */
+function generateEmbed(obj) {
+    const newObject = deepCloneWithLose(obj);
+    if (!newObject.color) newObject.color = Utils.variables.config.EmbedColors.Default;
+    if (typeof newObject.footer === 'string') newObject.footer = { text: newObject.footer };
+    if (typeof newObject.author === 'string') newObject.author = { name: newObject.author };
+    if (typeof newObject.thumbnail === 'string') newObject.thumbnail = { url: newObject.thumbnail };
+    if (typeof newObject.image === 'string') newObject.image = { url: newObject.image };
+    if (typeof newObject.timestamp === 'string') newObject.timestamp = parseInt(newObject.timestamp);
+    if (newObject.description) newObject.description = newObject.description.toString().slice(0, 2048);
+    return new MessageEmbed(newObject);
+}
