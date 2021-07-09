@@ -38,7 +38,7 @@ commandManager.addCommand({
         const content = contents[contentId];
         let message = content.message;
         let embed;
-        if (!message && !embed) {
+        if (!message && !content.embed) {
             console.log(`Can't send an empty content`);
             return;
         }

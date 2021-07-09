@@ -1,4 +1,4 @@
 title ABDevs Webhook Manager
-npm install
+npm i
 node .
 pause
