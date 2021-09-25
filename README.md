@@ -1,5 +1,7 @@
 # Discord Webhook Manager
 
+![banner](https://i.imgur.com/wAxPxWs.png)
+
 Lets you manage and execute your Discord Webhooks easily.
 
 # Setup Config
