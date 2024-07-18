@@ -1,4 +1,4 @@
-title ABDevs Webhook Manager
+title Webhook Manager
 npm i
 node .
 pause

@@ -2,13 +2,12 @@
 # yarn lockfile v1
 
 
-"@abdevs/console-manager@^1.4.1":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@abdevs/console-manager/-/console-manager-1.4.3.tgz#c9e055a3d79c8b1c7fabe26041a04edd22db9911"
-  integrity sha512-RTjx6ZGGHovvV0/9oqDvKdkXPXkPJBCBKsT4wVdncrnQgQY5zKjyAWCB1xtcnvOf2m9o8NhQ+xyyO3389x6/7w==
+"@ashuinsideout/console-manager@^4.3.3":
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/@ashuinsideout/console-manager/-/console-manager-4.3.3.tgz#e0c2cebdd71e4cd5d6c6c73b99d7649d986855d7"
+  integrity sha512-Ru9AY6+jm/DkcGyvVPO9Bj9Wuhv2Ayilk3CL7/t/jzRCCKFHOwX9A/++w6E1tqctln1g5OqAdUMa3DSSBPsO9Q==
   dependencies:
     colors "^1.4.0"
-    readline "^1.3.0"
 
 "@discordjs/collection@^0.1.6":
   version "0.1.6"
